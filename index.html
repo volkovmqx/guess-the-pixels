@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <title>Guess the pixels</title>
+</head>
+<body id="body">
+    
+   
+    <div class="nes-container is-dark with-title is-centered hidden" id="photo-container">
+        <p class="title" id="title"></p>
+        <p class="score"><i class="nes-icon coin"></i> x <span id="score">100</span></p>
+        <p id="score-change" class="score-change"></p>
+        <div id="photo-wrapper" style="image-rendering: pixelated;"></div>
+        <section id="controls">
+            <button type="button" class="nes-btn vote" data-vote-attribute="views">1M views</button>
+            <button type="button" class="nes-btn is-success vote" data-vote-attribute="likes">1K likes</button>
+            <button type="button" class="nes-btn is-warning vote" data-vote-attribute="location">in the United States</button>
+            <button type="button" class="nes-btn is-error vote" data-vote-attribute="none">Not any of those</button>
+            <button type="button" class="nes-btn is-primary" id="reveal-original">Reveal original (-5)</button>
+        </section>
+      </div>
+    
+    <div id="loader">
+        <i class="nes-icon is-large is-half heart hidden" id="api-limit" title="API limit reached - try again in 1 hour"></i>
+        <h1>Guess the pixels</h1>
+        <i class="nes-kirby spin"></i>
+    </div>
+    <div id="game-over" class="hidden">
+        <h1>Game over</h1>
+        <button type="button" class="nes-btn is-primary" id="repeat">Repeat</button>
+    </div>
+    <script src="app.js" type="module"></script>
+</body>
+</html>
